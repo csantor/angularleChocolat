@@ -12,7 +12,20 @@
             </div>
         </div>
         <div class="col-12 col-sm-6">
-            <p>Display the list of comments here</p>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Comments</h5>
+                    <ul class="list-group list-group-flush" *ngFor="let comment of dish.comments">
+                        <li class="list-group-item">
+                            <span class="font-weight-bold">{{comment.comment}}</span><br>
+                            {{comment.rating}} Stars<br>
+                            --{{comment.author}},
+                            {{comment.date | date: 'MMM. dd, yyyy' }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
