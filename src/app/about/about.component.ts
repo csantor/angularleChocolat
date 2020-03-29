@@ -3,7 +3,6 @@ import { LeaderService } from '../services/leader.service';
 import { Params, ActivatedRoute } from '@angular/router';
 import { Leader } from '../shared/leader';
 import { Location } from '@angular/common';
-import { LEADERS } from '../shared/leaders';
 
 @Component({
   selector: 'app-about',
@@ -13,7 +12,7 @@ import { LEADERS } from '../shared/leaders';
 export class AboutComponent implements OnInit {
 
   // leader: Leader;
-  leaders = LEADERS;
+  leaders: Leader[];
 
   constructor(private leaderservice: LeaderService,
     @Inject('BaseURL') public BaseURL,
