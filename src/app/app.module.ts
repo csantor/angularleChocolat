@@ -13,6 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { baseURL } from './shared/baseurl';
+import { ContactComponent } from './contact/contact.component';
+import { FeedbackService } from './services/feedback.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { baseURL } from './shared/baseurl';
     DishdetailComponent,
     FooterComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { baseURL } from './shared/baseurl';
   ],
   providers: [DishService,
     LeaderService,
+    FeedbackService,
     {provide: 'BaseURL', useValue: baseURL}],
   bootstrap: [AppComponent]
 })
