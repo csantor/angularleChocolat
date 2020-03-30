@@ -7,7 +7,8 @@
                     <ul class="list-group list-group-flush" *ngFor="let feedback of feedbacks">
                         <li class="list-group-item"><b>{{feedback.firstname}}</b> <br>
                             {{feedback.lastname}} <br>
-                            <span>-- {{feedback.message}}</span>
+                            <span>-- {{feedback.message}}</span><br>
+                            {{feedback.date | date : 'dd - MMM - yyyy'}}
                         </li>
                     </ul>
                 </div>
