@@ -31,7 +31,7 @@ export class ContactComponent implements OnInit {
     this.fb = this.feedbackForm.value;
     console.log(this.fb);
     this.fb.date = new Date().toISOString();
-    this.feedbacks.push(this.fb);
+    // this.feedbacks.push(this.fb);
     this.feedBackService.addFeedbacks(this.fb).subscribe(fb => this.feedbacks.push(this.fb));
     this.feedbackForm.reset({
       firstname: '',
